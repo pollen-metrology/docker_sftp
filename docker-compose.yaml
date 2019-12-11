@@ -5,4 +5,4 @@ sftp:
         - ./data/home:/home/
     ports:
         - "2222:22"
-    command: platypus::1001::/
+    command: platypus::1001::/data
