@@ -1,0 +1,8 @@
+sftp:
+    image: pollenm/docker_sftp
+    volumes:
+        - ./config/keys/id_rsa_platypus.pub:/home/platypus/.ssh/keys/id_rsa.pub:ro
+        - ./data/home:/home/
+    ports:
+        - "2222:22"
+    command: platypus::1001::/
