@@ -17,6 +17,9 @@ RUN apt-get update && \
 COPY files/sshd_config /etc/ssh/sshd_config
 COPY files/create-sftp-user /usr/local/bin/
 COPY files/entrypoint.sh /
+RUN chmod u+x /entrypoint.sh
+RUN chmod u+x /etc/ssh/sshd_config
+RUN chmod u+x /usr/local/bin/create-sftp-user
 
 EXPOSE 22
 
