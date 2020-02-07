@@ -2,7 +2,8 @@ sftp:
     image: pollenm/docker_sftp
     restart: always
     volumes:
-        - ./config/keys/id_rsa_platypus.pub:/home/platypus/.ssh/keys/id_rsa.pub:ro
+        #- ./config/keys/id_rsa_platypus.pub:/home/platypus/.ssh/keys/id_rsa.pub:ro
+        - ./config/keys/:/home/platypus/.ssh/keys/:ro
         - ./data/home:/home/
     ports:
         - "2222:22"
